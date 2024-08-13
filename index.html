@@ -12,9 +12,14 @@
 
     <p>This is a place to test playbooks, it's just a test area, nothing to do with MMB or Chatterbox</p>
     <script>
-
-const dfMessenger = document.querySelector('df-messenger');
-dfMessenger.startNewSession({ retainHistory: false });
+        document.addEventListener('DOMContentLoaded', function () {
+            const dfMessenger = document.querySelector('df-messenger');
+            if (dfMessenger) {
+                dfMessenger.addEventListener('df-messenger-loaded', function() {
+                    dfMessenger.startNewSession({ retainHistory: true });
+                });
+            }
+        });
     </script>
     <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
     <df-messenger
