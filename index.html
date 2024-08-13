@@ -16,8 +16,10 @@
             const dfMessenger = document.querySelector('df-messenger');
             if (dfMessenger) {
                 dfMessenger.addEventListener('df-messenger-loaded', function() {
+                    console.log('messenger loaded')
                     dfMessenger.startNewSession({ retainHistory: true });
                 });
+                console.log('found messenger')
             }
         });
     </script>
