@@ -12,12 +12,12 @@
 
     <p>This is a place to test playbooks, it's just a test area, nothing to do with MMB or Chatterbox</p>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        window.onload = function () {
             const dfMessenger = document.querySelector('df-messenger');
             if (dfMessenger) {
                 dfMessenger.addEventListener('df-messenger-loaded', function() {
                     console.log('messenger loaded')
-                    dfMessenger.startNewSession({ retainHistory: true });
+                    dfMessenger.startNewSession({ retainHistory: false });
                 });
                 console.log('found messenger')
             }
