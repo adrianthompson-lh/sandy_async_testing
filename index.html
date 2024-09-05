@@ -20,6 +20,17 @@
                     dfMessenger.startNewSession({ retainHistory: false });
                 });
                 console.log('found messenger')
+
+
+      
+                const metadata = {
+                "bookingid": "737729",
+                "platform": "Kustomer"
+                };
+                dfMessenger.setContext(metadata);
+
+
+
                 dfMessenger.startNewSession({ retainHistory: false });
             }
         };
@@ -76,6 +87,8 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
         }
     </style>
+
+    
 
 </body>
 </html>
