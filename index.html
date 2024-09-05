@@ -23,14 +23,13 @@
 
 
       
-                const metadata = {
-                "bookingid": "737729",
-                "platform": "Kustomer"
+                const params = {
+                    parameters: {
+                    bookingid: "737729",
+                    platform: "Kustomer"
+  }
                 };
-                dfMessenger.setContext(metadata);
-
-
-
+                dfMessenger.setQueryParameters(params);
                 dfMessenger.startNewSession({ retainHistory: false });
             }
         };
