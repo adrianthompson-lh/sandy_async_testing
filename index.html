@@ -23,13 +23,15 @@
 
 
       
-                const params = {
-                    "parameters": {
-                    "bookingid": "737729",
-                    "platform": "Kustomer"
-  }
+       
+
+                const queryParameters = {
+                parameters: {
+                    bookingid: "737729"
+                }
                 };
-                dfMessenger.setQueryParameters(params);
+                dfMessenger.setQueryParameters(queryParameters);
+
                 dfMessenger.startNewSession({ retainHistory: false });
             }
         };
@@ -39,7 +41,7 @@
   location="europe-west2"
   project-id="lh-ccaip-staging"
   agent-id="12c64410-1da3-41c9-805e-43e0c3953277"
-  language-code="en"
+
   intent="cs"
   max-query-length="-1">
   <df-messenger-chat-bubble
